@@ -112,13 +112,13 @@ def cancel():
 
 @ask.intent('AMAZON.HelpIntent')
 def help():
-    return question('This skill asks you the capital of a random country.'
-                    'Would you like to start?')
+    return question('This skill asks you the capitals of different countries in the world. Reply with a Yes to play '
+                    'the game and No to exit the skill. Would you like to start?')
 
 
 @ask.intent('AMAZON.StopIntent')
 def stop():
-    return statement('Thank you for using Random Riddles. Have a nice day !')
+    return statement('Thank you for playing Guess the capital. Have a nice day !')
 
 
 @ask.intent('AMAZON.FallbackIntent')
