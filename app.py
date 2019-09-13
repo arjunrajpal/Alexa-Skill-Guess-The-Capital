@@ -81,7 +81,9 @@ def play_continue(capital):
 
         question_string = 'Correct answer!'
 
-        if session.attributes['count'] % 5 ==0:
+        if session.attributes['score'] == 201:
+            return statement('<speak><prosody pitch="high">Congratulations !!! You have won ! </prosody>Well done ! Thank you for playing Guess the capital. Have a nice day !</speak>')
+        elif session.attributes['score'] % 5 ==0:
             question_string += ' You are doing great ! Your current score is ' + str(session.attributes['score']) + '.'
 
         question_string += ' Shall we continue ?'
